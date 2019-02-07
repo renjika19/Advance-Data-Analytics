@@ -3,17 +3,17 @@ PayRate = input('Pay')
 Employee = input('Employee Name')
 
 
+regular = int(Hours) * int(PayRate)
 
-if int(Hours) > 40:
-    overtimeRate = (1.5 * int(PayRate))
-    overtime = (int(Hours) - 40) * overtimeRate
-    Hours = 40
+if int(Hours) <= 40:
+    TotalPay = regular
 else:
-    overtime = 40
+    if int(Hours) > 40:
+        overtimeRate = (1.5 * int(PayRate))
+        overtime = (int(Hours) - 40) * overtimeRate
+        TotalPay = regular + overtime
 
-regular = int(int(Hours) * int(PayRate))
 
-TotalPay = regular + overtime
 
 print(Employee)
 print(Hours)
